@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw33om64g8mek"]
+
+[ext_resource type="Script" path="res://scripts/gesture_shape.gd" id="1_v5r6e"]
+[ext_resource type="Script" path="res://resources/input_data_resource.gd" id="2_0nnwt"]
+[ext_resource type="Script" path="res://resources/gesture_shape_resource.gd" id="2_7nlo7"]
+
+[sub_resource type="Resource" id="Resource_ykqp2"]
+resource_local_to_scene = true
+script = ExtResource("2_0nnwt")
+disabled = false
+input = [0]
+custom_input = false
+start_hovered = false
+
+[sub_resource type="Resource" id="Resource_l876a"]
+script = ExtResource("2_7nlo7")
+shape = 0
+fill = true
+unique_input = true
+input_data = SubResource("Resource_ykqp2")
+start_angle = 0.0
+end_angle = 90.0
+size = Vector2(20, 10)
+center = Vector2(0, 0)
+color_primary = Color(1, 1, 1, 1)
+color_secondary = Color(0, 0.501961, 0, 1)
+color_extra = PackedColorArray()
+
+[node name="GestureShape" type="Node2D"]
+script = ExtResource("1_v5r6e")
+data = SubResource("Resource_l876a")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(191, 98, 164, 269, 363, 327)
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+polygon = PackedVector2Array(192, 100, 167, 268, 359, 323, 278.321, 215.266)

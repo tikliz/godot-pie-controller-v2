@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhrjugj440xcx"]
+
+[ext_resource type="Script" path="res://scripts/gesture_controller.gd" id="1_nxbit"]
+[ext_resource type="Resource" uid="uid://bytqf5gq6lhy7" path="res://resources/default_controller.tres" id="2_4loob"]
+
+[node name="GestureController" type="Node2D"]
+script = ExtResource("1_nxbit")
+controller_data = ExtResource("2_4loob")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

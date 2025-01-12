@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="GestureControllerResource" load_steps=6 format=3 uid="uid://bytqf5gq6lhy7"]
+
+[ext_resource type="Script" path="res://resources/gesture_controller_resource.gd" id="1_h8i4c"]
+[ext_resource type="Script" path="res://resources/gesture_shape_resource.gd" id="2_85b45"]
+[ext_resource type="Script" path="res://resources/input_data_resource.gd" id="3_8852b"]
+
+[sub_resource type="Resource" id="Resource_ptlap"]
+script = ExtResource("3_8852b")
+disabled = false
+input = [0]
+custom_input = false
+start_hovered = false
+
+[sub_resource type="Resource" id="Resource_5ypqi"]
+resource_local_to_scene = true
+script = ExtResource("2_85b45")
+shape = 0
+fill = true
+unique_input = true
+input_data = SubResource("Resource_ptlap")
+start_angle = 0.0
+end_angle = 90.0
+size = Vector2(100, 100)
+center = Vector2(0, 0)
+color_primary = Color(1, 1, 1, 1)
+color_secondary = Color(0, 0.501961, 0, 1)
+color_extra = PackedColorArray()
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_h8i4c")
+shapes_array = Array[ExtResource("2_85b45")]([SubResource("Resource_5ypqi"), SubResource("Resource_5ypqi"), SubResource("Resource_5ypqi"), SubResource("Resource_5ypqi")])
